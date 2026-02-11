@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+<title>hennabyhanisha.com</title>
+<h1> Henna By Hanisha </h1>
+</head>
+<div>
+<a href="booking.html">
+    <button class="main-btn"> Book Now</button>
+</a>
+<a href="https://www.instagram.com/hennabyhanisha/">  Visit @hennabyhanisha on Instagram</a>
+</div>
+<body>
+<p> Welcome to Henna by Hanisha! I provide henna services in the Bay Area and Los Angeles </p>
+<p> Contact me at 4084381268 or DM on Insta for any inquiries or questions!</p>
+<div class="gallery">
+<img src="{{ url_for('static', filename='images/leaves-design.JPG') }}" width="180" height="300" alt="Henna Design">
+<img src="{{ url_for('static', filename='images/butterfly-design.JPG') }}" width="300" height="300" alt="Butterfly Design">
+<img src="{{ url_for('static', filename='images/flower-design.jpg') }}" width="300" height="300" alt="flower-design"><br>
+<img src="{{ url_for('static', filename='images/hibiscus-design.JPG') }}" width="250" height="300" alt="hibiscus-design">
+<img src="{{ url_for('static', filename='images/two-hands-design.JPEG') }}" width="225" height="300" alt="two-hands-design">
+<img src="{{ url_for('static', filename='images/IMG_4774.jpg') }}" width="200" height="300"><br>
+<img src="{{ url_for('static', filename='images/IMG_4776.jpg') }}" width="150" height="300">
+<img src="{{ url_for('static', filename='images/IMG_4775.jpg') }}" width="250" height="300">
+</div>
+<script src="{{ url_for('static', filename='booking.js') }}"></script>
+</body>
+</html>
+
