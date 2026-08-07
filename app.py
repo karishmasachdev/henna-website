@@ -8,17 +8,17 @@ app = Flask(__name__)
 # DATABASE CONNECTION (AIVEN)
 # ==============================
 connection = pymysql.connect(
-    charset="utf8mb4",
-    cursorclass=pymysql.cursors.DictCursor,
-    db="defaultdb",  # we'll create/use henna_booking table
-    host="henna-booking-db-hennabyhanisha.f.aivencloud.com",
-    user="avnadmin",
-    password="AVNS_-eGf6JbAGHIFePfwkte",
-    port=28479,
-    connect_timeout=10,
-    read_timeout=10,
-    write_timeout=10,
-)
+       charset="utf8mb4",
+       cursorclass=pymysql.cursors.DictCursor,
+       db=os.environ.get("DB_NAME"),
+       host=os.environ.get("DB_HOST"),
+       user=os.environ.get("DB_USER"),
+       password=os.environ.get("DB_PASSWORD"),
+       port=int(os.environ.get("DB_PORT", 28479)),
+       connect_timeout=10,
+       read_timeout=10,
+       write_timeout=10,
+   )
 
 cursor = connection.cursor()
 
